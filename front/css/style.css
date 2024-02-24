@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:700|Poppins:400');
+
+body {
+  font-family: 'Poppins';
+  font-weight: 400;
+}
+
+:root[data-bs-theme=light] {
+  --text: #190b0b;
+  --bs-tertiary-bg: #f8eded;
+  --bs-primary: #a72020 !important;
+  color: #a720200d;
+  --bs-secondary: #f47b7d !important;
+  --accent: #ed5e5e !important;
+}
+:root[data-bs-theme=dark] {
+  --text: #f4e6e6;
+  --background: #120707;
+  --primary: #df5858;
+  --secondary: #840b0d;
+  --accent: #a11212;
+}
+
+section {
+  margin-bottom: 30vh;
+}
+
+.feature-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: .75rem;
+}
+
+.icon-square {
+  width: 3rem;
+  height: 3rem;
+  border-radius: .75rem;
+}
+
+.text-shadow-1 { text-shadow: 0 .125rem .25rem rgba(0, 0, 0, .25); }
+.text-shadow-2 { text-shadow: 0 .25rem .5rem rgba(0, 0, 0, .25); }
+.text-shadow-3 { text-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .25); }
+
+.card-cover {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.feature-icon-small {
+  width: 3rem;
+  height: 3rem;
+}
