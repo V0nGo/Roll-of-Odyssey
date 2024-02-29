@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-sm bg-body-tertiary sticky-top border border-bottom border-1 border-black">
   <div class="container-fluid flex-sm-wrap">
     <a href="#" class="navbar-brand">
-        <img src="img/logo.png" alt="logo" height="150px">
+        <img src="img/logo512px.png" alt="logo" height="150px">
         <span class="text-decoration-none m-1 fw-bold d-none d-sm-inline">Roll of Odyssey</span>
     </a>
     <!-- Bouton extend -->
@@ -11,7 +11,7 @@
         type="button" 
         data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasNavbar" 
-        aria-controls="offcanvasNavbar" 
+        aria-controls="offcanvasNavbar"
         aria-label="Toggle navigation"
         >
       <span class="navbar-toggler-icon"></span>

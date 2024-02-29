@@ -8,7 +8,7 @@ include('./includes/head.php'); ?>
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-6 col-sm">
-                        <p class=" display-1 fw-bold">Redefinissez les règles</p>
+                        <p class=" display-1 fw-bold">Redéfinissez les règles</p>
                         <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos libero blanditiis dolor, eos provident expedita, ratione in, error debitis quo reprehenderit. Labore ducimus natus porro.</p>
                         <a class="btn btn-primary" href="#" role="button">S'inscrire maintenant</a>
                     </div>
@@ -22,7 +22,7 @@ include('./includes/head.php'); ?>
         <section>
             <div class="container">
                 <div class="flex-column">
-                    <p class=" display-4 fw-bold col-md-5 col">
+                    <p class=" display-4 fw-bold col-md-7 col">
                         <span class="text-primary">One seamless</span>, end-to-end product design workflow.
                     </p>
 
@@ -71,7 +71,7 @@ include('./includes/head.php'); ?>
                 <div class="flex-column ">
                     <div class="row mb-5">
                         <div class="col-md-6 col-10">
-                            <h1 class="fw-bold ">Découvrer les dernières campagnes</h1>
+                            <h1 class="fw-bold ">Découvrez les dernières campagnes</h1>
                         </div>
                         <div class="col-5 d-inline-flex align-items-end justify-content-end offset-">
                             <a class="btn btn-primary" href="#" role="button" style="height: fit-content;">
