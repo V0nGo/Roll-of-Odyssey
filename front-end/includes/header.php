@@ -1,5 +1,5 @@
 <header class="bg-body-tertiary"> 
-  <nav class="navbar navbar-expand-sm bg-body-tertiary sticky-top border border-bottom border-1 border-black">
+  <nav class="navbar navbar-expand-sm bg-body-tertiary sticky-top border-bottom border-1 border-black">
   <div class="container-fluid flex-sm-wrap">
     <a href="#" class="navbar-brand">
         <img src="img/logo512px.png" alt="logo" height="150px">
