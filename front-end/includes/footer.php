@@ -1,4 +1,4 @@
-<footer class="d-flex flex-wrap justify-content-between align-items-center py-4 border-top bg-body-tertiary">
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-4 border-top bg-body-tertiary ">
     <div class="col-md-7 d-flex align-items-center mx-4 text-nowrap flex-wrap">
         <a href="#" class="m-3 mb-md-0 text-body-primary text-decoration-none lh-1">
             <span class="text-body-secondary">

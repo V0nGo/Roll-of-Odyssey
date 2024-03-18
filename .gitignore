@@ -1,0 +1,15 @@
+# Ignorer les fichiers et dossiers générés par l'environnement de développement
+.vscode/
+node_modules/
+
+# Ignorer les fichiers de build
+build/
+dist/
+
+
+# Ignorer les fichiers de logs
+logs/
+
+
+# Ignorer les images sauf default.jpg
+!/images/users/default.jpg
