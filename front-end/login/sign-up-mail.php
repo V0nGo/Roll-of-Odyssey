@@ -1,6 +1,19 @@
 <head>
     <link rel="stylesheet" href="../css/login.css">
-<?php $title = 'Inscription';
+<?php $title = 'Vérification du mail';
+
+// Log de la page visitée
+    // Ouverture du fichier d'inscription
+    $log = fopen($_SERVER['DOCUMENT_ROOT'] . '\logs\pages.txt', 'a+');
+    // Création de la ligne à ajouter : AAAA/mm/jj - hh:mm:ss -  Tentative de connexion réussie/échouée de : {email}
+    $line = getenv("REMOTE_ADDR") . ' - ' . date('d/m/Y - H:i:s') . ' - ' . 'Visite de ' . $title . ' par ' . (isset($_SESSION['email']) ? $_SESSION['email'] : 'Anonyme') . "\n";
+
+    // Ajout de la ligne au fichier ouvert 
+    fputs($log, $line);
+
+    // Fermeture du fichier ouvert
+    fclose($log);
+
 include('../includes/head.php'); ?>
 
 <?php
@@ -51,13 +64,14 @@ $captcha = $req->fetchAll();
 
                 <h2 class="my-4 text-center">Vérification du mail</h2>
                 <?php 
-                echo '<p>' . 'Un mail de vérification vient d\'être envoyé à <strong>' . $_GET['email'] . '</strong> vous avez 20 minutes avant que le code n\'expire' . '</p>' 
+                echo '<p>' . 'Un mail de vérification vient d\'être envoyé à <strong>' . $_SESSION['email'] . '</strong> vous avez 20 minutes avant que le code n\'expire' . '</p>' 
                 ?>
                 
                 <div class="form-floating">
-                    <input type="code-mail" name="code-mail" class="form-control" id="floatingVerifMail" placeholder="Entrer le code à 6 caractères" required>
+                    <input type="code" name="code" class="form-control" id="floatingVerifMail" placeholder="Entrer le code à 6 caractères" required maxlength="6">
                     <label for="floatingVerifMail">Entrer le code à 6 caractères</label>
                 </div>
+                <input type="hidden" name="email" value="<?= $_SESSION['email'] ?>">
                 <p>Vous pourrez renvoyer un mail dans 60 secondes</p>
                 <button class="btn btn-primary align-self-start my-3 disabled" type="button">Renvoyer le mail</button>
                 <button class="btn btn-primary align-self-end my-3" type="submit">Confirmer</button>

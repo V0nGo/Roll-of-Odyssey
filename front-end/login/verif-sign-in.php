@@ -117,6 +117,7 @@ $results = $req->fetchAll();
 
 // Si $results est vide > redirection
 if (empty($results)) {
+    writeLogSignIn(false, $_POST['email']);
     header('location:sign-in.php?message=Identifiants inconnue');
     exit;
 }

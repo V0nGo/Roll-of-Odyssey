@@ -1,6 +1,19 @@
 <head>
     <link rel="stylesheet" href="../css/login.css">
 <?php $title = 'Inscription';
+
+// Log de la page visitée
+    // Ouverture du fichier d'inscription
+    $log = fopen($_SERVER['DOCUMENT_ROOT'] . '\logs\pages.txt', 'a+');
+    // Création de la ligne à ajouter : AAAA/mm/jj - hh:mm:ss -  Tentative de connexion réussie/échouée de : {email}
+    $line = getenv("REMOTE_ADDR") . ' - ' . date('d/m/Y - H:i:s') . ' - ' . 'Visite de ' . $title . ' par ' . (isset($_SESSION['email']) ? $_SESSION['email'] : 'Anonyme') . "\n";
+
+    // Ajout de la ligne au fichier ouvert 
+    fputs($log, $line);
+
+    // Fermeture du fichier ouvert
+    fclose($log);
+
 include('../includes/head.php'); ?>
 
 <?php

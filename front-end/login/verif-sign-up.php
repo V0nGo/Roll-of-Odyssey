@@ -231,7 +231,37 @@ if (!$result) {
     exit;
 }
 
+
+// Envoi d'un email de confirmation
+
+// Génération d'un code à 6 caractères aléatoires
+$code = bin2hex(random_bytes(3));
+
+
+// Écrire la requête INSERT INTO à trous
+$q = 'INSERT INTO email_verif (email, code, expiration) VALUES (:email, :code, :expiration)';
+// Préparation de la requête
+$req = $bdd->prepare($q);
+// Exécution de la requête
+$req->execute([
+    'email' => $_POST['email'],
+    'code' => $code,
+    'expiration' => time() + 20 * 60
+]);
+
+// Envoi de l'email
+
+require '../script.php';
+
+sendMail($_POST['email'], 'Confirmation de votre inscription', 'Bonjour, voici votre code de vérification : ' . $code);
+
+session_start();
+
+$_SESSION['email'] = $_POST['email'];
+
+
+
 // Si on arrive ici c'est que le nouveau compte à été créé en base de donnée
 writeLogSignUp(true, $_POST['email']);
-header('location:sign-in.php?success=Compte créé en base de données');
+header('location:sign-up-mail.php');
 exit;
