@@ -23,7 +23,7 @@ chartVisiteurs.render();
 
 // Graphique des rôles (Joueur ou MJ)
 var optionsRole = {
-    series: [503, 120], // Exemple de données : 503 joueurs, 120 MJ
+    series: [503, 120], //  données : 503 joueurs, 120 MJ
     chart: {
         type: 'pie',
         height: 300
@@ -49,10 +49,10 @@ chartRole.render();
 var optionsProblemes = {
     series: [{
         name: 'Résolus',
-        data: [10, 15, 14, 18, 17, 13, 16] // Exemple de tickets résolus
+        data: [10, 15, 14, 18, 17, 13, 16] //  tickets résolus
     }, {
         name: 'Non résolus',
-        data: [3, 8, 5, 7, 6, 5, 4] // Exemple de tickets non résolus
+        data: [3, 8, 5, 7, 6, 5, 4] // tickets non résolus
     }],
     chart: {
         type: 'bar',
@@ -77,7 +77,7 @@ chartProblemes.render();
 var optionsAvis = {
     series: [{
         name: 'Notes',
-        data: [4.0, 3.5, 4.0, 4.5, 3.0], // Exemple de moyenne des notes
+        data: [4.0, 3.5, 4.0, 4.5, 3.0], //  moyenne des notes
     }],
     chart: {
         height: 350,
